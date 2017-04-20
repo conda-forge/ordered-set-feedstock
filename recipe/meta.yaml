@@ -1,36 +1,36 @@
-{% set version = "2.0.1" %}
+{% set version = "2.0.2" %}
 
 package:
-    name: ordered-set
-    version: {{ version }}
+  name: ordered-set
+  version: {{ version }}
 
 source:
-    fn: ordered-set-{{ version }}.tar.gz
-    url: https://pypi.python.org/packages/source/o/ordered-set/ordered-set-{{ version }}.tar.gz
-    md5: 3111c0dd1417b6421eb982e4cd4d0d68
+  fn: ordered-set-{{ version }}.tar.gz
+  url: https://pypi.io/packages/source/o/ordered-set/ordered-set-{{ version }}.tar.gz
+  sha256: 942cad5d7d5b0760d5cbe93dfb385ac2ed402ca1d48c9f4e102d7d5cce3a90eb
 
 build:
-    number: 0
-    script: python setup.py install --single-version-externally-managed --record record.txt
+  number: 0
+  script: python setup.py install --single-version-externally-managed --record record.txt
 
 requirements:
-    build:
-        - python
-        - setuptools
-    run:
-        - python
+  build:
+    - python
+    - setuptools
+  run:
+    - python
 
 test:
-    imports:
-        - ordered_set
+  imports:
+    - ordered_set
 
 about:
-    home: http://github.com/LuminosoInsight/ordered-set
-    license: MIT
-    summary: A MutableSet that remembers its order, so that every entry has an index
+  home: http://github.com/LuminosoInsight/ordered-set
+  license: MIT
+  summary: 'A MutableSet that remembers its order, so that every entry has an index.'
 
 
 extra:
-    recipe-maintainers:
-        - benjwadams
-        - ocefpaf
+  recipe-maintainers:
+    - benjwadams
+    - ocefpaf
