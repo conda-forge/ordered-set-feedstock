@@ -1,22 +1,22 @@
-{% set version = "2.0.2" %}
+{% set version = "3.0.0" %}
 
 package:
   name: ordered-set
   version: {{ version }}
 
 source:
-  fn: ordered-set-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/o/ordered-set/ordered-set-{{ version }}.tar.gz
-  sha256: 942cad5d7d5b0760d5cbe93dfb385ac2ed402ca1d48c9f4e102d7d5cce3a90eb
+  sha256: a34399fe6aa78358aaa00129d67c65b4aa099adfc023731b1d756c85776a89bb
 
 build:
   number: 0
-  script: python setup.py install --single-version-externally-managed --record record.txt
+  script: python -m pip install --no-deps --ignore-installed .
 
 requirements:
   build:
     - python
-    - setuptools
+    - pip
+    - pytest-runner
   run:
     - python
 
@@ -27,6 +27,7 @@ test:
 about:
   home: http://github.com/LuminosoInsight/ordered-set
   license: MIT
+  license_file: MIT-LICENSE
   summary: 'A MutableSet that remembers its order, so that every entry has an index.'
 
 
