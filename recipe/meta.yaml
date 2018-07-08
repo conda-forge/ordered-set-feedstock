@@ -9,11 +9,12 @@ source:
   sha256: a34399fe6aa78358aaa00129d67c65b4aa099adfc023731b1d756c85776a89bb
 
 build:
-  number: 0
+  noarch: python
+  number: 1
   script: python -m pip install --no-deps --ignore-installed .
 
 requirements:
-  build:
+  host:
     - python
     - pip
     - pytest-runner
