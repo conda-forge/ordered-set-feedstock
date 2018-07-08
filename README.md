@@ -14,9 +14,8 @@ Summary: A MutableSet that remembers its order, so that every entry has an index
 Current build status
 ====================
 
-[![Linux](https://img.shields.io/circleci/project/github/conda-forge/ordered-set-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/ordered-set-feedstock)
-[![OSX](https://img.shields.io/travis/conda-forge/ordered-set-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/ordered-set-feedstock)
-[![Windows](https://img.shields.io/appveyor/ci/conda-forge/ordered-set-feedstock/master.svg?label=Windows)](https://ci.appveyor.com/project/conda-forge/ordered-set-feedstock/branch/master)
+All platforms:
+[![noarch](https://img.shields.io/circleci/project/github/conda-forge/ordered-set-feedstock/master.svg?label=noarch)](https://circleci.com/gh/conda-forge/ordered-set-feedstock)
 
 Current release info
 ====================
