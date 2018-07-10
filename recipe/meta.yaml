@@ -1,4 +1,4 @@
-{% set version = "3.0.0" %}
+{% set version = "3.0.1" %}
 
 package:
   name: ordered-set
@@ -6,11 +6,11 @@ package:
 
 source:
   url: https://pypi.io/packages/source/o/ordered-set/ordered-set-{{ version }}.tar.gz
-  sha256: a34399fe6aa78358aaa00129d67c65b4aa099adfc023731b1d756c85776a89bb
+  sha256: 3d6fd7bffbb15f613a9e8a6281bf97c2d67f7bb8677deca8249df2fbdd9cce7b
 
 build:
   noarch: python
-  number: 1
+  number: 0
   script: python -m pip install --no-deps --ignore-installed .
 
 requirements:
