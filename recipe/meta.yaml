@@ -11,19 +11,23 @@ source:
 build:
   number: 0
   noarch: python
-  script: {{ PYTHON }} -m pip install . --no-deps -vv
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
-    - python
+    - python >=3.5
     - pip
-    - pytest-runner
   run:
-    - python
+    - python >=3.5
 
 test:
   imports:
     - ordered_set
+  commands:
+    - pip check
+  requires:
+    - pip
+
 
 about:
   home: http://github.com/LuminosoInsight/ordered-set
