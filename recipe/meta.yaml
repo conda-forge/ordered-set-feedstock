@@ -1,24 +1,26 @@
+{% set name = "ordered-set" %}
 {% set version = "4.1.0" %}
 
 package:
-  name: ordered-set
+  name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/o/ordered-set/ordered-set-{{ version }}.tar.gz
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/ordered-set-{{ version }}.tar.gz
   sha256: 694a8e44c87657c59292ede72891eb91d34131f6531463aab3009191c77364a8
 
 build:
-  number: 0
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
+  number: 0
 
 requirements:
   host:
-    - python >=3.5
     - pip
+    - python >=3.7
+    - flit-core
   run:
-    - python >=3.5
+    - python >=3.7
 
 test:
   imports:
@@ -27,7 +29,6 @@ test:
     - pip check
   requires:
     - pip
-
 
 about:
   home: http://github.com/LuminosoInsight/ordered-set
